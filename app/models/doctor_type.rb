@@ -2,5 +2,5 @@
 
 class DoctorType < ApplicationRecord
   has_many :doctors
-  validates :type, uniqueness: true
+  validates :category, uniqueness: true
 end

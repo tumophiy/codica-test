@@ -6,6 +6,6 @@ RSpec.describe DoctorType, type: :model do
   end
 
   describe 'validations' do
-    it { should validate_uniqueness_of(:type) }
+    it { should validate_uniqueness_of(:category) }
   end
 end
