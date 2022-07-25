@@ -6,6 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   ROLES = %i[admin doctor patient].freeze
+  validates :fullname, presence: true
 
   def self.options
     ROLES.map { |option| option }
