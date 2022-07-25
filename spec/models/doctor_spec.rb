@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Doctor, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'associations' do
+    it { should belong_to(:user) }
+    it { should belong_to(:doctor_type) }
+    it { should have_many(:visits) }
+    it { should have_many(:patients) }
+  end
 end

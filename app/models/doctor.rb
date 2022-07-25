@@ -4,5 +4,5 @@ class Doctor < ApplicationRecord
   belongs_to :user
   belongs_to :doctor_type
   has_many :visits
-  has_many :patiens, through: :visits
+  has_many :patients, through: :visits
 end
