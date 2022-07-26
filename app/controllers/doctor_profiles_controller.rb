@@ -15,13 +15,13 @@ class DoctorProfilesController < ApplicationController
   end
 
   def show
+    @name = current_user.fullname
     @free_slots = 10 - Visit.where(doctor_id: params[:id]).where(status: 'true').count
   end
 
   private
 
   def current_doctor(user = current_user.id)
-    @name = current_user.fullname
     Doctor.find_by(user_id: user)
   end
 
