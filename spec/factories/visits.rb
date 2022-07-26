@@ -2,9 +2,9 @@
 
 FactoryBot.define do
   factory :visit do
-    patient_id { 'MyString' }
-    doctor_id { 'MyString' }
-    recomendation { 'MyText' }
-    status { false }
+    patient_id { (create :patient).id }
+    doctor_id { (create :doctor).id }
+    recomendation { Faker::Lorem.sentence }
+    status { true }
   end
 end

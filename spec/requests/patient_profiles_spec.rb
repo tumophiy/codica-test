@@ -3,6 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe 'PatientProfiles', type: :request do
+  let(:user)
   describe 'GET /index' do
     it 'returns http success' do
       get '/patient_profiles/index'

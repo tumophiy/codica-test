@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :doctor_type do
-    type { '' }
+    category { Faker::Lorem.word }
   end
 end
