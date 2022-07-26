@@ -10,6 +10,7 @@
 ### Implemented:
 - tests for validations and assosiations via rspec, shoulda-mathers
 - devise registration + added field role and fullname to registration
+- add factories for each of the model using faker
 
 ### More pics:
 - admin page
