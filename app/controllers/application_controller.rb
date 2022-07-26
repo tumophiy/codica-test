@@ -8,10 +8,10 @@ class ApplicationController < ActionController::Base
     when 'doctor'
       category = DoctorType.find_or_create_by(category: 'Default')
       Doctor.find_or_create_by(user_id: current_user.id, doctor_type_id: category.id)
-      doctor_profiles_index_path
+      doctor_profiles_path
     when 'patient'
       Patient.find_or_create_by(user_id: current_user.id)
-      patient_profiles_index_path
+      patient_profiles_path
     end
   end
 end

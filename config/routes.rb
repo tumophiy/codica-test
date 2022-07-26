@@ -1,21 +1,20 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'doctor_profiles/index'
-  get 'doctor_profiles/show'
-  get 'patient_profiles/index'
+  resources :doctor_profiles, only: %i[index show]
+  resources :visits, only: [:create]
+  resources :patient_profiles, only: [:index]
   namespace :admin do
-      resources :users
-      resources :doctors
-      resources :doctor_types
-      resources :patients
-      resources :visits
+    resources :users
+    resources :doctors
+    resources :doctor_types
+    resources :patients
+    resources :visits
 
-      root to: "users#index"
-    end
+    root to: 'users#index'
+  end
   devise_for :users, controllers: {
     registrations: 'registrations'
   }
-  get 'home/index'
   root to: 'home#index'
 end

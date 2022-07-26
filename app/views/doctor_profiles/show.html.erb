@@ -1,2 +1,2 @@
-<h1>DoctorProfiles#show</h1>
-<p>Find me in app/views/doctor_profiles/show.html.erb</p>
+<h1>Doctor: <%= @name%> has <%= @free_slots %> free slots</h1>
+<%= button_to "Book a visit", visits_path(doctor_id: params[:id]), method: :post %>
