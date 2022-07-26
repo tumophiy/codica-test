@@ -1,24 +1,24 @@
-# README
+# Codica Test
+## Structure of my db
+![](./imgs/db.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Credentials:
+1. admin@gmail.com, 123456
+2. doctor@gmail.com, 123456
+3. patient@gmail.com, 123456
 
-Things you may want to cover:
+### Implemented:
+- tests for validations and assosiations via rspec, shoulda-mathers
+- devise registration + added field role and fullname to registration
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### More pics:
+- admin page
+![](./imgs/admin.png)
+- admin-new-category page
+![](./imgs/admin-new-category.png)
+- patient-books page
+![](./imgs/patient-books.png)
+- patient-profile page
+![](./imgs/patient-profile.png)
+- roles when registration
+![](./imgs/roles-vis.png)
