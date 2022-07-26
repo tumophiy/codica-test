@@ -1,0 +1,2 @@
+<h1>Doctor <%= @name%>: has <%= @free_slots %> free slots</h1>
+<%= button_to "Book a visit", visits_path(doctor_id: params[:id]), method: :post %>

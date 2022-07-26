@@ -1,0 +1,28 @@
+<h1>Your profile</h1>
+<h2>Your visits</h2>
+<% @visits.each.with_index(1) do |visit, idx| %>
+  <div>
+    <% if visit.status == true %>
+      <h6><%= "#{idx}." %>  active</h4>
+    <% else %>
+      <h6><%= "#{idx}." %>  past</h4>
+      <h6> Recomendations from visit are: <%= visit.recomendation %></h6>
+    <% end %>
+  </div>
+<% end %>
+
+<h2>Doctors:</h2>
+<% @doctors.each do |doctor| %>
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"><%= doctor.fullname %></span>
+        </div>
+        <div class="card-action">
+          <%= link_to "Book a visit", doctor_profile_path(doctor) %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

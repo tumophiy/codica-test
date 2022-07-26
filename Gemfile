@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
+gem 'administrate', '~> 0.17.0'
 gem 'cancancan', '~> 3.4'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
