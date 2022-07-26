@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'doctor_profiles/index'
+  get 'doctor_profiles/show'
+  get 'patient_profiles/index'
   namespace :admin do
       resources :users
       resources :doctors

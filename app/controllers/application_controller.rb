@@ -6,10 +6,12 @@ class ApplicationController < ActionController::Base
     when 'admin'
       admin_root_path
     when 'doctor'
-      doctor_path
+      category = DoctorType.find_or_create_by(category: 'Default')
+      Doctor.find_or_create_by(user_id: current_user.id, doctor_type_id: category.id)
+      doctor_profiles_index_path
     when 'patient'
-      Patient.create({ patient_id: User.last.id })
-      root_path
+      Patient.find_or_create_by(user_id: current_user.id)
+      patient_profiles_index_path
     end
   end
 end
