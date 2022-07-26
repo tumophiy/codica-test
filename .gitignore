@@ -32,5 +32,3 @@
 
 # Ignore env variables
 .env
-
-Gemfile.lock
